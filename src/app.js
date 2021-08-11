@@ -19,7 +19,7 @@ module.exports = ()=>{
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}));
-    app.use(cors());
+    app.use(cors({credentials:true}));
 
     app.use('/', schema_route);
     app.use('/', crud_route);
